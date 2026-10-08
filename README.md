@@ -13,6 +13,6 @@ Vite prints a Network address, for example `http://192.168.1.20:5173`. Open that
 
 Favorites, the last station, volume, theme, and the equalizer are saved in that browser. Edit `stations.tsv` (`name`, `url`, `genre`, `favorite` of `0` or `1`, separated by tabs) and refresh to change the list.
 
-`npm test` checks the station list and the equalizer curve. `npm run build` then `npm run preview` serves the production build at `http://localhost:5173/radioWeb/`.
+`npm test` checks the station list and the equalizer curve. `npm run build` then `npm run preview` serves the production build at `http://localhost:5173/`.
 
-The public site is [https://josebaperu.github.io/radioWeb/](https://josebaperu.github.io/radioWeb/). A push to `main` builds and deploys it with GitHub Pages.
+The public site is [https://josebaperu.github.io/radioWeb/](https://josebaperu.github.io/radioWeb/). `npm run build` writes the bundle into `assets/`. Commit that folder with your changes and push `main`. GitHub Pages serves those files.

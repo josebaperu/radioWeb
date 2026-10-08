@@ -21,6 +21,22 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
+    <script>
+      // GitHub Pages publishes this repository as-is. Load the built bundle there.
+      var pagesHost = /\.github\.io$/.test(location.hostname) || /[?&]built=1(?:&|$)/.test(location.search)
+      if (pagesHost) {
+        var icon = document.querySelector('link[rel="icon"]')
+        if (icon) icon.setAttribute('href', './public/favicon.svg')
+        var style = document.createElement('link')
+        style.rel = 'stylesheet'
+        style.href = './assets/index.css'
+        document.head.appendChild(style)
+        var app = document.createElement('script')
+        app.type = 'module'
+        app.src = './assets/app.js'
+        document.body.appendChild(app)
+      }
+    </script>
   </body>
 </html>
